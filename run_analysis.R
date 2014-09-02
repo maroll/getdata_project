@@ -38,6 +38,7 @@ agg_small<-aggregate(desc_small, by=list(desc_small$subject, desc_small$activity
 #clean up extra columns
 agg_small$activity_name <- NULL
 agg_small$subject <- NULL
+agg_small$training_label <- NULL
 colnames(agg_small)[1:2] <- c("training_label", "activity_name")
 
 #write final dataset
